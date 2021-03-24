@@ -19,8 +19,6 @@
 <link href="../css/subpage.css" rel="stylesheet" type="text/css">
 <%
 request.setCharacterEncoding("utf-8");
-// BoardDAO bdao = new BoardDAO();
-// ResultSet rs = bdao.list();
 String search = request.getParameter("search");
 fboardDAO fbdao = new fboardDAO();
 int count = fbdao.getFBoardCount(search);
@@ -39,24 +37,9 @@ int startRow = (currentPage - 1) * pageSize + 1 ;
 
 
 
-// List boardList = fboardDAO.getFBoardList1(startRow,pageSize);
 List fboardList = fbdao.getFBoardList1(startRow, pageSize, search);
 SimpleDateFormat sdf = new SimpleDateFormat("yy.MM.dd");
 %>
-<!--[if lt IE 9]>
-<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js" type="text/javascript"></script>
-<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/ie7-squish.js" type="text/javascript"></script>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-<![endif]-->
-<!--[if IE 6]>
- <script src="../script/DD_belatedPNG_0.0.8a.js"></script>
- <script>
-   /* EXAMPLE */
-   DD_belatedPNG.fix('#wrap');
-   DD_belatedPNG.fix('#main_img');   
-
- </script>
- <![endif]-->
 </head>
 <body>
 <div id="wrap">

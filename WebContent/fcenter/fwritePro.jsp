@@ -47,11 +47,7 @@ String file = multi.getFilesystemName("file");
 
 
 
-//패키지 board 파일이름 BoardBean
-//멤버변수 set() get()
-// BoardBean bb 객체 생성
 fboardBean fb = new fboardBean();
-//bb set메서드 호출 <=  파라미터값 저장
 fb.setName(name);
 fb.setPass(pass);
 fb.setSubject(subject);

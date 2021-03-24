@@ -20,8 +20,6 @@ Z<%@page import="gboard.GBoardBeen"%>
 </Style>
 <%
 request.setCharacterEncoding("utf-8");
-// BoardDAO bdao = new BoardDAO();
-// ResultSet rs = bdao.list();
 GBoardDAO gbdao = new GBoardDAO();
 int count = gbdao.getgBoardCount();
 
@@ -34,12 +32,10 @@ if(pageNum == null){
 int currentPage=Integer.parseInt(pageNum);
 
 int startRow = (currentPage - 1) * pageSize + 1 ;
-// ? startRow -1 ? pageSize
 		
 
 
 
-// List boardList = fboardDAO.getFBoardList1(startRow,pageSize);
 List gboardList = gbdao.getgBoardList1(startRow, pageSize);
 SimpleDateFormat sdf = new SimpleDateFormat("yy.MM.dd");
 %>
@@ -84,8 +80,6 @@ int newLine = 0;
 int articleCount=0;
 int cnt = 0;
 for(int i = 0; i < gboardList.size(); i++) {
-// 	BoardBean bb=(BoardBean)fboardList.get(i);
-//	fboardBean fb = (fboardBean)fboardList.get(i);
 	GBoardBeen gb = (GBoardBeen)gboardList.get(i);	
  if(newLine == 0){
 	 out.print("<tr>");

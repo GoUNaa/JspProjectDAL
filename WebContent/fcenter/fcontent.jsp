@@ -21,16 +21,8 @@ String id = (String)session.getAttribute("id");
 
 request.setCharacterEncoding("utf-8");
 int num = Integer.parseInt(request.getParameter("num"));
-// String uploadPath=request.getRealPath("/upload");
-// System.out.println(uploadPath);
-// int maxSize = 10 * 1024 * 1024;
-// MultipartRequest multi = new MultipartRequest(request,uploadPath,maxSize,"utf-8",new DefaultFileRenamePolicy());
-
-// BoardDAO bdao = new BoardDAO();
 fboardDAO fbdao = new fboardDAO();
-// bdao.updateReadcount(num);
 fboardBean fb = fbdao.getFBoard(num);
-// String file = multi.getFilesystemName("file");
 
 
 %>

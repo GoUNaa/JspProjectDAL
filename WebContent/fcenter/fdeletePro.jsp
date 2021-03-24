@@ -17,11 +17,6 @@ request.setCharacterEncoding("utf-8");
 int num = Integer.parseInt(request.getParameter("num"));
 String pass = request.getParameter("pass");
 
-// BoardDAO bdao = new BoardDAO();
-// BoardBean bb = new BoardBean();
-// bb.setPass(pass);
-// bb.setNum(num);
-// int check = bdao.numcheck(bb);
 
 fboardDAO fbdao = new fboardDAO();
 fboardBean fb = new fboardBean();

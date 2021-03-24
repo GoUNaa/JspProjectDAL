@@ -16,7 +16,6 @@ request.setCharacterEncoding("utf-8");
 
 int num = Integer.parseInt(request.getParameter("num"));
 
-//BoardDAO bdao = new BoardDAO();
 GBoardDAO gbdao = new GBoardDAO();
 GBoardBeen gb = gbdao.getgBoard(num);
 
@@ -55,9 +54,6 @@ GBoardBeen gb = gbdao.getgBoard(num);
 
 <div id="table_search">
 <input type="submit" value="삭제">
-<%-- <input type="button" value="글수정" onclick="location.href='updateForm.jsp?num=<%=bb.getNum()%>'"> --%>
-<%-- <input type="button" value="글삭제" onclick="location.href='deleteForm.jsp?num=<%=bb.getNum()%>'"> --%>
-<!-- <input type="button" value="글목록" onclick="location.href='notice.jsp'"> -->
 </div>
 
 </table>

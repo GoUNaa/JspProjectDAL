@@ -94,7 +94,7 @@ for(int i = 0; i < boardList.size(); i++){
     	 <td class = boardTitle><a href="../center/content.jsp?num=<%=bb.getNum()%>"><%=bb.getSubject() %></a></td>
       <td class = boardUserName><%=bb.getName()%></td>
       <td class = boardReadCount><%=bb.getReadcount() %></td>
-<td><%=bb.getDate() %></td>
+ <td class = tableRegDate><%=bb.getDate() %></td>
      
       
    </tr>

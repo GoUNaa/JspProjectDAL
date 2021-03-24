@@ -21,8 +21,6 @@
 <link href="../css/subpage.css" rel="stylesheet" type="text/css">
 <%
 request.setCharacterEncoding("utf-8");
-// BoardDAO bdao = new BoardDAO();
-// ResultSet rs = bdao.list();
 String search = request.getParameter("search");
 GBoardDAO gbdao = new GBoardDAO();
 
@@ -37,12 +35,10 @@ if(pageNum == null){
 int currentPage=Integer.parseInt(pageNum);
 
 int startRow = (currentPage - 1) * pageSize + 1 ;
-// ? startRow -1 ? pageSize
 		
 
 
 
-// List boardList = fboardDAO.getFBoardList1(startRow,pageSize);
 List gboardList = gbdao.getGBoardList1(startRow, pageSize, search);
 SimpleDateFormat sdf = new SimpleDateFormat("yy.MM.dd");
 %>
@@ -93,7 +89,6 @@ if(id != null){
 
 <%
 for(int i = 0; i < gboardList.size(); i++){
-// 	BoardBean bb=(BoardBean)fboardList.get(i);
 	GBoardBeen gb = (GBoardBeen)gboardList.get(i);
 
 %>
